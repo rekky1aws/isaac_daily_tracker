@@ -1,15 +1,36 @@
+<?php 
+// Path prefix for autoload
+define("PATH_PREFIX", "./");
+
+// Autoloader to include code
+include_once PATH_PREFIX."controller/autoload.php";
+
+$header = new Header();
+$head = new Head();
+
+$runObject = createFromEnv();
+$runObject->getAllRuns();
+var_dump($runObject->runs);
+var_dump($runObject->totalPlayedNb());
+var_dump($runObject->winsNb());
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<?= $head->getContent(); ?>
 	<title> Isaac Daily Run Tracker </title>
 </head>
 <body>
-	<head>
-		<span>The Binding of Isaac</span>
-		<h1>Daily Run Tracker</h1>
-	</head>
+	<?= $header->getContent(); ?>
+	<main>
+		<?php 
 
+
+
+		?>
+	</main>
 </body>
 </html>

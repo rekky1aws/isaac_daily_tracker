@@ -1,3 +1,3 @@
 <?php
-$_ENV = parse_ini_file(PATH_PREFIX.".env.local");
+$_ENV = parse_ini_file(PATH_PREFIX.".env");
 ?>

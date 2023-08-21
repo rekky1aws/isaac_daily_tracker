@@ -9,3 +9,4 @@
  	+ use json (no need to enter it in db)
  + Display Total Played and Wins
  + Display calendar with all the DR of the month
+ + Bento design CSS
