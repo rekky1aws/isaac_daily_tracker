@@ -56,7 +56,9 @@ class DRDB
 
 	function addTodayRun ()
 	{
-		
+		// if  AM register for the day before
+		// if PM register for current day
+			// check if the date as already been registered	
 	}
 }
 
