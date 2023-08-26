@@ -2,7 +2,7 @@
 
 class DRDB 
 {
-	public $pdo;
+	private $pdo;
 	public $runs;
 
 	function __construct ($driver, $host, $port, $db_name, $db_user, $db_pass)
@@ -22,6 +22,26 @@ class DRDB
 			$dst = $this->pdo->prepare($query);
 			$dst->execute();
 			$this->runs = $dst->fetchAll(PDO::FETCH_ASSOC);
+
+		} catch (Exception $e) {
+			die($e->getMessage());
+		}
+	}
+
+	function getLastFive ()
+	{
+		try {
+			$query = "SELECT * FROM runs ORDER BY id DESC LIMIT 5";
+			$dst = $this->pdo->prepare($query);
+			$dst->execute();
+			$fiveLastRuns = $dst->fetchAll(PDO::FETCH_ASSOC);
+			$runsStatus = [];
+
+			foreach ($fiveLastRuns as $run) {
+					array_push($runsStatus, $run['success']);
+			}
+
+			return $runsStatus;
 
 		} catch (Exception $e) {
 			die($e->getMessage());
