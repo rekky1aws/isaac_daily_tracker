@@ -12,9 +12,10 @@ $runObject = createFromEnv();
 $runObject->getAllRuns();
 
 var_dump($runObject->runs);
-var_dump($runObject->totalPlayedNb());
-var_dump($runObject->winsNb());
-var_dump($runObject->getLastFive());
+// var_dump($runObject->totalPlayedNb());
+var_dump($runObject->getStreak());
+// var_dump($runObject->winsNb());
+// var_dump($runObject->getLastFive());
 
 ?>
 

@@ -18,7 +18,8 @@ class DRDB
 	function getAllRuns ()
 	{
 		try {
-			$query = "SELECT * FROM runs";
+			// Get all run ordered by date (last run played is in position 0, first played will be in last position in the array)
+			$query = "SELECT * FROM runs ORDER BY 'date' DESC";
 			$dst = $this->pdo->prepare($query);
 			$dst->execute();
 			$this->runs = $dst->fetchAll(PDO::FETCH_ASSOC);
@@ -31,7 +32,8 @@ class DRDB
 	function getLastFive ()
 	{
 		try {
-			$query = "SELECT * FROM runs ORDER BY id DESC LIMIT 5";
+			// Getting data for 5 last runs 
+			$query = "SELECT * FROM runs ORDER BY 'date' DESC LIMIT 5";
 			$dst = $this->pdo->prepare($query);
 			$dst->execute();
 			$fiveLastRuns = $dst->fetchAll(PDO::FETCH_ASSOC);
@@ -46,6 +48,24 @@ class DRDB
 		} catch (Exception $e) {
 			die($e->getMessage());
 		}
+	}
+
+	function getStreak ()
+	{
+		// Get Runs data if it hasn't already been done
+		if (empty($runs))
+		{
+			$this->getAllRuns();
+		}
+
+		$streak = 0;
+
+		while ($this->runs[$streak]['success'] == '1')
+		{
+			$streak++;
+		}
+
+		return $streak;
 	}
 
 	function totalPlayedNb ()
