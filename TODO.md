@@ -1,5 +1,6 @@
 # TODO
 
+## To Do
  + Add a an entry (win or fail)
  	+ check if time is before noon (day before if it's teh case)
  + Display result of the last 5 runs
@@ -10,6 +11,7 @@
  + Display calendar with all the DR of the month
  + Bento design CSS
 
+## Done
  - DRDB :
 	 - getAllRuns
 	 - getLastFive
