@@ -111,6 +111,7 @@ class DRDB
 		// Inserting into database
 		try {
 			$query = "INSERT INTO runs (date, success) VALUES (\"$dateResult\", $success);";
+			echo $query; // DEBUG
 			$dst = $this->pdo->prepare($query);
 			$dst->execute();
 

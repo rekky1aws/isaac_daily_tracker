@@ -30,7 +30,7 @@ $runObject->getAllRuns();
 	<?= $header->getContent(); ?>
 	<main>
 		<?php 
-
+			include_once PATH_PREFIX."view/addTodayRun.php";
 
 
 		?>
