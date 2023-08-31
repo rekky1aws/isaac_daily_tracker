@@ -9,6 +9,8 @@
  + Display Total Played and Wins
  + Display calendar with all the DR of the month
  + Small Bento design CSS
+ + Add a way to edit a run if a mistake wase made
+ 	+ warn user to not us in case of a success run if failed before
 
 ## Done
  - DRDB :
