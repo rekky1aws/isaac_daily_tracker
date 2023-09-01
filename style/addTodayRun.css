@@ -1,0 +1,15 @@
+.success {
+	background-color: darkseagreen;
+}
+
+.fail {
+	background-color: tomato;
+}
+
+.today_info {
+	display: inline-block;
+	color: #FFF;
+	font-weight: bold;
+	padding: 10px;
+	border-radius: 25px;
+}

@@ -6,9 +6,9 @@
 			<a class="today_button fail button" href="<?php echo PATH_PREFIX."controller/add/addFail.php";?>">Failed</a>
 		<?php else:?>
 			<?php if ($runObject->todayRunStatus()): ?>
-				<span class="success"> Successful </span>
+				<span class="today_info success"> Successful </span>
 			<?php else: ?>
-				<span class="fail"> Failed</span>
+				<span class="today_info fail"> Failed</span>
 			<?php endif; ?>
 		<?php endif; ?>
 	</div>
