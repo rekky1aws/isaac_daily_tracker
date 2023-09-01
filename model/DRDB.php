@@ -29,6 +29,22 @@ class DRDB
 		}
 	}
 
+	function getTodayDate ()
+	{
+		$hours = intval(date('H'));
+
+		// If before 12h, date is day before
+		if ($hours < 12)
+		{
+			$dateResult = date("Y-m-d",strtotime("-1 days"));
+		// Else, date is today
+		} else {
+			$dateResult = date("Y-m-d");
+		}
+
+		return $dateResult;
+	}
+
 	function getLastFive ()
 	{
 		try {
@@ -99,25 +115,57 @@ class DRDB
 		$dateTime = new DateTimeImmutable();
 		$hours = intval($dateTime->format("H"));
 
-		// If before 12h, date is day before
-		if ($hours < 12)
-		{
-			$dateResult = date("Y-m-d",strtotime("-1 days"));
-		// Else, date is today
-		} else {
-			$dateResult = date("Y-m-d");
-		}
+		$dateResult = $this->getTodayDate();
 
 		// Inserting into database
 		try {
 			$query = "INSERT INTO runs (date, success) VALUES (\"$dateResult\", $success);";
-			echo $query; // DEBUG
 			$dst = $this->pdo->prepare($query);
 			$dst->execute();
 
 		} catch (Exception $e) {
 			die($e->getMessage());
 		}
+	}
+
+	function runDateExists ($date)
+	{
+		// Check if there's an entry for $date.
+		try {
+			$query = "SELECT count(*) AS nb FROM runs WHERE date LIKE \"$date\";";
+			$dst = $this->pdo->prepare($query);
+			$dst->execute();
+			return intval($dst->fetchAll(PDO::FETCH_ASSOC)[0]['nb']);
+
+		} catch (Exception $e) {
+			die($e->getMessage());
+		}
+	}
+
+	function runDateStatus ($date)
+	{
+		// Getting status of run for $date
+		try {
+			$query = "SELECT success FROM runs WHERE date LIKE \"$date\";";
+			$dst = $this->pdo->prepare($query);
+			$dst->execute();
+			return intval($dst->fetchAll(PDO::FETCH_ASSOC)[0]['success']);
+
+		} catch (Exception $e) {
+			die($e->getMessage());
+		}
+	}
+
+	function todayRunExists ()
+	{
+		$date = $this->getTodayDate();
+		return $this->runDateExists($date);
+	}
+
+	function todayRunStatus ()
+	{
+		$date = $this->getTodayDate();
+		return $this->runDateStatus($date);
 	}
 }
 
