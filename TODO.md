@@ -1,7 +1,6 @@
 # TODO
 
 ## To Do
- + Add a view for adding an entry (win or fail) (check date to display or not)
  + Display result of the last 5 runs
  + Display streak count
  + Count max streak and display it
