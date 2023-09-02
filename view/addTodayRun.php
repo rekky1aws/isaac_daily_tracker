@@ -1,6 +1,6 @@
 <div class="today_container">
 	<span class="today_title"> Today 's run was :</span>
-	<div>
+	<div class="today_buttons_flex">
 		<?php if (!$runObject->todayRunExists()): ?>
 			<a class="today_button success button" href="<?php echo PATH_PREFIX."controller/add/addSuccess.php";?>">Successful</a>
 			<a class="today_button fail button" href="<?php echo PATH_PREFIX."controller/add/addFail.php";?>">Failed</a>
