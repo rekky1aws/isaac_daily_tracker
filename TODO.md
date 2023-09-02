@@ -25,3 +25,5 @@
  - controller :
  	- autoload :
  		- readEnv
+ - view :
+ 	- addTodayRunµ.php
