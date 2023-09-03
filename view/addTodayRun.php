@@ -1,4 +1,4 @@
-<div class="today_container">
+<div class="today_container parts">
 	<span class="today_title"> Today 's run was :</span>
 	<div class="today_buttons_flex">
 		<?php if (!$runObject->todayRunExists()): ?>
