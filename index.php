@@ -31,6 +31,7 @@ $runObject->getAllRuns();
 	<main>
 		<?php 
 		include_once PATH_PREFIX."view/addTodayRun.php";
+		include_once PATH_PREFIX."view/display/displayLastFive.php";
 
 
 		?>
