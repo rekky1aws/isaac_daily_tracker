@@ -2,6 +2,12 @@ body {
 	font-family: Helvetica, sans-serif;
 }
 
+main {
+	display: grid;
+	grid-template-rows: repeat(12, 1fr);
+	grid-template-columns: repeat(12, 1fr);
+}
+
 .button {
 	margin: 0;
 	padding: 10px;
