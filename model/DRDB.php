@@ -76,7 +76,7 @@ class DRDB
 
 		$streak = 0;
 
-		while ($this->runs[$streak]['success'] == '1')
+		while ($this->runs[count($this->runs)-$streak-1]['success'] == '1')
 		{
 			$streak++;
 		}
