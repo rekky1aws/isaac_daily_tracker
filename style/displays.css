@@ -1,0 +1,42 @@
+/* Last five runs */
+:root {
+    --lfr_size: 25px;
+}
+
+.last_five_container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.last_five_grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap:2px;
+}
+
+.last_five_run {
+    border-radius: 50%;
+    height:var(--lfr_size);
+    width:var(--lfr_size);
+}
+
+.last_five_run:nth-child(2) {
+    opacity: 0.8;
+}
+
+.last_five_run:nth-child(3) {
+    opacity: 0.6;
+}
+
+.last_five_run:nth-child(4) {
+    opacity: 0.4;
+}
+
+.last_five_run:nth-child(5) {
+    opacity: 0.2;
+}

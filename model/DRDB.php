@@ -49,7 +49,7 @@ class DRDB
 	{
 		try {
 			// Getting data for 5 last runs 
-			$query = "SELECT * FROM runs ORDER BY 'date' DESC LIMIT 5;";
+			$query = "SELECT * FROM runs ORDER BY date DESC LIMIT 5;";
 			$dst = $this->pdo->prepare($query);
 			$dst->execute();
 			$fiveLastRuns = $dst->fetchAll(PDO::FETCH_ASSOC);

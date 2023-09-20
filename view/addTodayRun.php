@@ -1,5 +1,5 @@
 <div class="today_container parts">
-	<span class="today_title"> Today 's run was :</span>
+	<span class="today_title parts_title"> Today 's run was :</span>
 	<div class="today_buttons_flex">
 		<?php if (!$runObject->todayRunExists()): ?>
 			<a class="today_button success button" href="<?php echo PATH_PREFIX."controller/add/addSuccess.php";?>">Successful</a>

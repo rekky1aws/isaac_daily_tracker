@@ -2,14 +2,6 @@
 	--bra:  15px;
 }
 
-.success {
-	background-color: darkseagreen;
-}
-
-.fail {
-	background-color: tomato;
-}
-
 .today_info {
 	display: inline-block;
 	color: #FFF;
@@ -24,6 +16,7 @@
 	align-items: center;
 	flex-direction: column;
 	gap: 15px;
+	grid-column: 1 / 4;
 }
 
 .today_buttons_flex {
