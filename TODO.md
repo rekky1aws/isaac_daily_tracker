@@ -1,7 +1,6 @@
 # TODO
 
 ## To Do
- + Display result of the last 5 runs
  + Display streak count
  + Count max streak and display it
  	+ use json (no need to enter it in db)
@@ -27,3 +26,5 @@
  		- readEnv
  - view :
  	- addTodayRunµ.php
+	- displayStreak.php
+	- displayLastFive.php
