@@ -33,6 +33,7 @@ $runObject->getAllRuns();
 		include_once PATH_PREFIX."view/addTodayRun.php";
 		include_once PATH_PREFIX."view/display/displayStreak.php";
 		include_once PATH_PREFIX."view/display/displayLastFive.php";
+		include_once PATH_PREFIX."view/display/displayTotalPlayed.php";
 
 
 		?>

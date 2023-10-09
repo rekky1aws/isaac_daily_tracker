@@ -1,12 +1,11 @@
 # TODO
 
 ## To Do
- + Display streak count
  + Count max streak and display it
  	+ use json (no need to enter it in db)*
 	+ new calculation when a new run is added
 		+ get current streak and change it if its more than previous max
- + Display Total Played and Wins
+ + Display Wins
  + Display calendar with all the DR of the month
  + Small Bento design CSS
  + Add a way to edit a run if a mistake wase made
@@ -36,3 +35,4 @@
  	- addTodayRunµ.php
 	- displayStreak.php
 	- displayLastFive.php
+	- displayTotalPlayed.php
