@@ -84,7 +84,7 @@ class DRDB
 		return $streak;
 	}
 
-	function getMaxStreak ()
+	private function getMaxStreak ()
 	{
 		if (file_exists("data/data.json")) {
 			// Read maxStreak in data.json
@@ -101,7 +101,7 @@ class DRDB
 		}
 	}
 
-	function setMaxStreak ($value)
+	private function setMaxStreak ($value)
 	{
 		// Override maxStreak in data.json
 		$data = [
@@ -109,6 +109,15 @@ class DRDB
 		];
 		$jsonData = json_encode($data);
 		$file = file_put_contents("data/data.json", $jsonData);
+	}
+
+	function updateMaxStreak ()
+	{
+		$currentStreak = $this->getStreak()
+		$maxStreak = $this->getMaxStreak();
+		if ($currentStreak > $maxStreak) {
+			$this->setMaxStreak($currentStreak);
+		}
 	}
 
 	function totalPlayedNb ()
