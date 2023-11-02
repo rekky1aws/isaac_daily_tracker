@@ -84,6 +84,33 @@ class DRDB
 		return $streak;
 	}
 
+	function getMaxStreak ()
+	{
+		if (file_exists("data/data.json")) {
+			// Read maxStreak in data.json
+			$fileData = file_get_contents("data/data.json");
+			$data = json_decode($fileData);
+			return $data->maxStreak;
+		} else {
+			$data = [
+				"maxStreak" => 0
+			];
+			$jsonData = json_encode($data);
+			$file = file_put_contents("data/data.json", $jsonData);
+			die("The file data.json was not found, initialized it.");
+		}
+	}
+
+	function setMaxStreak ($value)
+	{
+		// Override maxStreak in data.json
+		$data = [
+			"maxStreak" => $value
+		];
+		$jsonData = json_encode($data);
+		$file = file_put_contents("data/data.json", $jsonData);
+	}
+
 	function totalPlayedNb ()
 	{
 		try {

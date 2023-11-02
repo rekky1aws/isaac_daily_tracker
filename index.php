@@ -18,6 +18,8 @@ $runObject->getAllRuns();
 // var_dump($runObject->getLastFive());
 // var_dump($runObject->addTodayRun(true));
 
+// $runObject->setMaxStreak(6);
+$runObject->getMaxStreak();
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,6 @@ $runObject->getAllRuns();
 		include_once PATH_PREFIX."view/display/displayStreak.php";
 		include_once PATH_PREFIX."view/display/displayLastFive.php";
 		include_once PATH_PREFIX."view/display/displayTotalPlayed.php";
-
 
 		?>
 	</main>
