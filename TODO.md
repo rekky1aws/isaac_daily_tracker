@@ -26,6 +26,9 @@
 	 - totalPlayedNb
 	 - winsNb
 	 - addTodayRun
+	 - getMaxStreak
+	 - setMaxStreak
+	 - updateMaxStreak
  - components :
  	- head
  	- header
@@ -37,3 +40,4 @@
 	- displayStreak.php
 	- displayLastFive.php
 	- displayTotalPlayed.php
+	- displayMaxStreak.php
