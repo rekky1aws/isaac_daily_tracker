@@ -84,7 +84,7 @@ class DRDB
 		return $streak;
 	}
 
-	private function getMaxStreak ()
+	function getMaxStreak ()
 	{
 		if (file_exists("data/data.json")) {
 			// Read maxStreak in data.json
@@ -113,7 +113,7 @@ class DRDB
 
 	function updateMaxStreak ()
 	{
-		$currentStreak = $this->getStreak()
+		$currentStreak = $this->getStreak();
 		$maxStreak = $this->getMaxStreak();
 		if ($currentStreak > $maxStreak) {
 			$this->setMaxStreak($currentStreak);
