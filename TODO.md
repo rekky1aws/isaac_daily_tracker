@@ -36,7 +36,7 @@
  	- autoload :
  		- readEnv
  - view :
- 	- addTodayRunµ.php
+ 	- addTodayRun.php
 	- displayStreak.php
 	- displayLastFive.php
 	- displayTotalPlayed.php
