@@ -2,10 +2,6 @@
 # TODO
 
 ## To Do
- + Count max streak and display it
- 	+ use json (no need to enter it in db)
-	+ new calculation when a new run is added
-		+ get current streak and change it if its more than previous max
  + Display Wins
  + Display calendar with all the DR of the month
  + Small Bento design CSS
