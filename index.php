@@ -35,6 +35,7 @@ $runObject->getAllRuns();
 		include_once PATH_PREFIX."view/display/displayMaxStreak.php";
 		include_once PATH_PREFIX."view/display/displayLastFive.php";
 		include_once PATH_PREFIX."view/display/displayTotalPlayed.php";
+		include_once PATH_PREFIX."view/display/displayCalendar.php";
 
 		?>
 	</main>

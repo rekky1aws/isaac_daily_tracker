@@ -2,9 +2,12 @@
 # TODO
 
 ## To Do
+ + Sort code to match MVC
+ 	+ displayCalendar : some parts should be in a controller
  + Display Wins
  + Display calendar with all the DR of the month
  + Small Bento design CSS
+ 	+ Use variables to get a more coherent look easily
  + Add a way to edit a run if a mistake wase made
  	+ warn user to not to use in case of a success run if failed before
 
