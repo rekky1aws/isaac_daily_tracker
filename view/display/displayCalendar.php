@@ -84,7 +84,7 @@
 		}
 	?>
 	
-		<span class="calendar_tile <?=$tileStatus?> <?=$isToday ? "selected" : ""?>">
+		<span class="calendar_tile<?=" ".$tileStatus?><?=$isToday ? " selected" : ""?>">
 			
 		</span>
 	
