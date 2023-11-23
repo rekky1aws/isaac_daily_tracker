@@ -4,7 +4,7 @@
 	<?php 
 	/* display a 15 x 7 grid ending this week (S M T W T F S)
 	colors :
-		- -1 not available : grey
+		- -1 not available : white
 		- 0 not registerd : lightgrey
 		- 1 fail : red
 		- 2 success : green

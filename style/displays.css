@@ -56,7 +56,7 @@
 }
 
 .calendar_tile.not_available {
-    background-color: grey;
+    visibility: hidden;
 }
 
 .calendar_tile.not_registered {
