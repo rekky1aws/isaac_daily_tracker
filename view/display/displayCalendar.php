@@ -35,7 +35,7 @@
 	}
 
 	// Nombre de jours à enlever depuis aujourd'hui.
-	$nbDays = 1;
+	$nbDays = 0;
 
 	// On fini de remplir le tableau pour 
 	while ($i < count($runs))
