@@ -5,7 +5,6 @@
  + Sort code to match MVC
  	+ displayCalendar : some parts should be in a controller
  + Display Wins
- + Display calendar with all the DR of the month
  + Small Bento design CSS
  	+ Use variables to get a more coherent look easily
  + Add a way to edit a run if a mistake wase made
@@ -40,3 +39,4 @@
 	- displayLastFive.php
 	- displayTotalPlayed.php
 	- displayMaxStreak.php
+	- displayCalendar.php
